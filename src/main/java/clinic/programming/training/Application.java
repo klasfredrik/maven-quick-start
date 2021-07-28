@@ -5,8 +5,13 @@ import org.apache.commons.lang3.StringUtils;
 public class Application {
     
 	public int countWords(String words) {
-		String[] separateWords = StringUtils.split(words, ' ');
-		return separateWords.length;
+		if (words != null) {
+		  String[] separateWords = StringUtils.split(words, ' ');
+		  return separateWords.length;
+		} else {
+			return 0;
+		}
+		
 	}
     public Application() {
         System.out.println ("Inside Application");
